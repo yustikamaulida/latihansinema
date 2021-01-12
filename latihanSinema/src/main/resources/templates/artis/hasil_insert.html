@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<table border="1">
+		<thead>
+			<tr>
+				<th>Kode</th>
+				<th>Nama</th>
+				<th>Gender</th>
+				<th>Bayaran</th>
+				<th>Award</th>
+				<th>Negara</th>
+			</tr>
+		</thead>
+		<tbody>
+				<td><a th:text="${artisModel.kodeArtis}"></a></td>
+				<td><a th:text="${artisModel.namaArtis}"></a></td>
+				<td><a th:text="${artisModel.jkArtis}"></a></td>	
+				<td><a th:text="${artisModel.bayaranArtis}"></a></td>	
+				<td><a th:text="${artisModel.awardArtis}"></a></td>	
+				<td><a th:text="${artisModel.negaraArtis}"></a></td>	
+			</tr>
+			
+		</tbody>
+
+	</table>
+	
+			<button><a href= "/sinema/artis/list">View List</a></button>
+</body>
+</html>

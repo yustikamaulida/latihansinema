@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>List Pasien</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+
+	<h1>Tabel Pasien</h1>
+
+	<form th:action="@{/artis/detail}">
+		Nama Detail : <input type="text" name="keyword" id="keyword"
+			th:value="${keyword}" required /> &nbsp; <input type="submit"
+			value="Search"> &nbsp;
+	</form>
+	<br>
+
+	<form th:action="@{/artis/search}">
+		Nama Search: <input type="text" name="keyword" id="keyword"
+			th:value="${keyword}" required /> &nbsp; <input type="submit"
+			value="Search"> &nbsp;
+	</form>
+
+	<br>
+
+	<button>
+		<a href="/sinema/artis/add"> Create New</a>
+	</button>
+
+
+	<table border="1" class="table">
+		<thead  class="thead-dark">
+			<tr>
+				<th scope="col">Kode</th>
+				<th scope="col">Nama</th>
+				<th scope="col">Gender</th>
+				<th scope="col">Bayaran</th>
+				<th scope="col">Award</th>
+				<th scope="col">Negara</th>
+				<th scope="col"></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="artisModel:${artisModelList}">
+				<td><a th:text="${artisModel.kodeArtis}"></a></td>
+				<td><a th:text="${artisModel.namaArtis}"></a></td>
+				<td><a th:text="${artisModel.jkArtis}"></a></td>
+				<td><a th:text="${artisModel.bayaranArtis}"></a></td>
+				<td><a th:text="${artisModel.awardArtis}"></a></td>
+				<td><a th:text="${artisModel.negaraArtis}"></a></td>
+
+				<!-- 	<td><a th:href="@{/edit/{noPasien}(noPasien=${pasienModel.noPasien})}">Edit</a> -->
+
+				<td>
+						<a th:href="@{/artis/update?(artisID=${artisModel.kodeArtis})}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Edit</a>
+						<a th:href="@{/artis/delete?(artisID=${artisModel.kodeArtis})}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Delete</a>
+				</td>		
+									
+			</tr>
+		</tbody>
+
+	</table>
+
+</body>
+</html>

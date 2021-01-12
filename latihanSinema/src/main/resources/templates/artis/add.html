@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+</head>
+<body>
+	<div class="card">
+		<div class="card-body">
+			<h3 class="card-title">Tambah Data Artis</h3>
+			<p class="card-description">Masukkan Detail</p>
+			<form class="forms-sample" id="form-artis-tambah"
+				action="/sinema/hasil_insert" method="post">
+				<div class="form-group">
+					<label> Kode </label> <input type="text" name="kodeArtis"
+						class="form-control" placeholder="Masukkan Kode Artis" />
+				</div>
+				<div class="form-group">
+					<label> Nama </label> <input type="text" name="namaArtis"
+						class="form-control" placeholder="Masukkan Nama Pasien" />
+				</div>
+				<div class="form-group">
+					<label> Gender</label> <input type="text" name="jkArtis"
+						class="form-control" placeholder="Masukkan Gender Pasien" />
+				</div>
+				<div class="form-group">
+					<label> Bayaran</label> <input type="text" name="bayaranArtis"
+						class="form-control" placeholder="Masukkan Bayaran Pasien" />
+				</div>
+				<div class="form-group">
+					<label> Award</label> <input type="text" name="awardArtis"
+						class="form-control" placeholder="Masukkan Award Pasien" />
+				</div>
+				<div class="form-group">
+					<label> Negara</label> <input type="text" name="negaraArtis"
+						class="form-control" placeholder="Masukkan Negara Pasien" />
+				</div>
+				<button type="submit" class="btn btn-success mr-2">Submit</button>
+				<button class="btn btn-success mr-2">
+					<a href="/project2/pasien/pasienn"></a>View List
+					</buton>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
